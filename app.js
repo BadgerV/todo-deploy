@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(
-    express.static(path.join(__dirname, "../client/build"))
+    express.static(path.join(__dirname, "./client/build"))
 )
 
 
@@ -24,7 +24,7 @@ app.use('/', routes);
 
 app.get('*', (req, res) => {
     res.sendFile(
-        path.join(__dirname, "../client/build/index.html")
+        path.join(__dirname, "./client/build/index.html")
     )
 })
 
